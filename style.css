@@ -1,0 +1,167 @@
+
+body{
+    border: 1px solid black;
+    padding: 10px;
+}
+
+h1:hover{
+    background-color: red;
+    width: 100%;
+}
+
+#ram{
+    border: 1px solid black;
+    width: 300px;
+}
+button{
+    color: black;
+    font-weight: 600;
+    background-color: blue;
+    border-radius: 10px;
+}
+button::first-letter{
+    color: yellow;
+    font-size: 20px;
+}
+button:hover{
+    color: white;
+}
+
+
+  .robo{
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border-radius: 30px;
+    transition: ease-in;
+    
+  }
+  .robo:hover{
+    width: 200px;
+    animation: rotate 2s linear;
+    animation-timing-function: ease-in-out;
+    animation-duration: 1s;
+    animation-fill-mode: alternative;
+    animation-direction: reverse;
+  }
+  
+
+  @keyframes rotate {
+    0%{
+        top:0px;
+        left:0px;
+    }
+    25%{
+        top:250px;
+        left:0px;
+    }
+    75%{
+        top:250px;
+        left:250px;
+    }
+    100%{
+        top:250px;
+        left:0;
+    }
+    
+  }
+
+   .move{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+   }
+  
+  img{
+    transition: 1s;
+    
+    
+  }
+
+  img:hover{
+    transform: matrix(0,10,10,0,10,-1.5);
+    transition: 2s;
+    width: 300px;
+    
+  }
+
+  #img2{
+    transition: 2s;
+    box-shadow: 2px 2px 2px black;
+  }
+  #img2:hover{
+    /* border: 1px dotted yellow; */
+    transform: scale3d(2,2,5);
+    transition: 2s;
+
+  }
+
+  .back{
+    background-image: url(./img.png);
+    background-size: cover;
+    /* background-position: center; */
+    /* background-size: cover; */
+    opacity: 0.6;
+    border: 1px solid black;
+    width: 400px;
+    height: 200px;
+
+  }
+
+  .box{
+    border: 2px solid black;
+    background-color: red;
+    height: 100px;
+    width: 300px;
+    transition-duration: 2s;/*This is for come back*/
+    transition-delay: 2s;
+  }
+
+  .box:hover{
+    width: 1000px;
+    background-color: aqua;
+    /*transition-property: width; /*all,or you can give any*/
+     transition-duration: 5s; 
+     transition-timing-function: steps(5);/* It takes five steps to complete*/
+     transition-delay: 2s;/*the delay time for taking animation */
+  }
+
+  .animation {
+    animation-name: slideIn;
+    animation-duration: 4s;
+    overflow: hidden;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+
+  }
+
+  @keyframes slideIn {
+
+     from{
+        margin-left: 100%;
+        transform: rotate(0deg);
+     }
+     50%{
+        width: 200px;
+        height: 200px;
+        /* transform: rotate(180deg); */
+     }
+    to{
+        margin-left: 0%;
+        transform: rotate(360deg);
+     }
+    
+  }
+
+  .color{
+    width: 500;
+    height: 500;
+    background-image: linear-gradient(rgb(148, 30, 30),rgb(213, 213, 28),rgb(81, 81, 193), rgb(108, 208, 108));
+  }
+
+  .color2{
+    width: 500;
+    height: 500;
+    border-radius: 10px;
+    background-image: radial-gradient(rgb(213, 213, 28) 10%,rgb(81, 81, 193), rgb(108, 208, 108),red,rgb(202, 63, 177),rgb(94, 240, 240),maroon);
+  }
